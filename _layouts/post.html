@@ -1,0 +1,28 @@
+---
+layout: base
+---
+<article class="post">
+    <h1 class="post__title">{{ page.title | escape }}</h1>
+    <hr/>
+    <section class="post__pubdate">
+        {%- assign date_format = "%b %d, %Y" -%}
+        <time datetime="{{ page.date }}">
+            {{ page.date | date: date_format }}
+        </time>
+        {%- if page.modified_date -%}
+            ~
+            {%- assign mdate = page.modified_date -%}
+            <time datetime="{{ mdate }}" >
+                {{ mdate | date: date_format }}
+            </time>
+        {%- endif -%}
+    </section>
+    <section class="post__tags">
+        {%- for tag in page.tags -%}
+            <span class="post__tag">#{{ tag }}</span>
+        {%- endfor -%}
+    </section>
+    <section class="post__content">
+        {{ content }}
+    </section>
+</article>
