@@ -96,7 +96,7 @@ hr {
     align-items: center;
 }
 
-.language-plaintext.highlighter-rouge {
+code.language-plaintext.highlighter-rouge {
     color: var(--main-color);
     background-color: rgba(var(--main-color-rgb), .2);
     padding: 1px 6px;
@@ -115,7 +115,7 @@ hr {
 /* Styles for code highlighting  */
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
-.highlight, .highlight .w {
+figure.highlight, div.highlight, .highlight .w {
     margin: 40px 0;
     font-size: 1rem;
     padding: 20px;
